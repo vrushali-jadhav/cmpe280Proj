@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "app.js",
 	"scripts": {
+		"start": "nodemon app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
@@ -25,6 +26,7 @@
 		"open": "^7.0.0",
 		"openurl": "^1.1.1",
 		"req-flash": "0.0.3",
+		"socket.io": "^2.3.0",
 		"sweetalert2": "^9.4.3"
 	}
 }
