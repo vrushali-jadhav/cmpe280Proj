@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function showtext(){
+                var date = document.getElementById("email");
+                console.log(date.innerHTML);
+                date.type = "date";
+                if (date.textContent == ""){
+                    console.log(date);
+                date.type = "text";
+            }
+            else date.type = "date";
+            }
+
+            function pwstrength(){
+                var password = document.getElementById("password").value;
+                document.getElementById("pwmsg").style.visibility = "visible";
+                var bar = document.getElementById("strength");
+                var val = bar.value;
+                bar.style.visibility = "visible";
+                console.log(password.length);
+                bar.low = "0.45";
+                bar.high = "0.75";
+                bar.optimum = "0.8";
+                if (password.length < 6){
+                    bar.value = "0.3";
+                    bar.background = "red";
+                }
+                else if (password.length < 9)bar.value = "0.55";
+                else bar.value = "0.8";
+            }
+        </script>
+        <meta name="description" content="Register to use the website.">
+        <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+        <meta name="author" content="Vrushali Jadhav">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <header>
+            <div class="navigationclass">
+                    <ul class="navbar-nav" id="navg">
+                        <li class="nav-item">
+                            <a class="nav-link register" id="reg" href="register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="log" href="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="hom" href="">Hi there!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link brand">Roommate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-b">Finder</a>
+                        </li>
+                    </ul>
+                </div>
+    </header>
+        <div class="registration">
+            <div class="resgitrationdetails">Create account
+                <form method="post" action="/registerpost">
+                    <input type="text" class= "registerclass" id="fname" name="fname" placeholder="Please enter your first name" required>
+                    <br>
+                    <input type="text" class= "registerclass" id="lname" name="lname" placeholder="Please enter your Last name" required>
+                    <br>
+                    <input type="text" class= "registerclass" id="email" name="email" placeholder="Please enter your Email" required>
+                    <br>
+                    <input type="password" class= "registerclass" oninput="pwstrength()" id="password"  name="password" placeholder="Please enter a password" required>
+                    <br>
+                    <input type="text" placeholder="Please Enter your Date of Birth" 
+                    onfocus="(this.type='date')" class= "registerclass" id="dob" name="dob" placeholder="Please provide your DoB in mm/dd/yyyy format" required>
+                    <br>
+                    <input type="list" list="genderoptions" class="registerclass" id="gender" name="gender" placeholder="Please select your gender" required>
+                    <datalist id="genderoptions">
+                        <option value="Female">
+                        <option value="Male">
+                    </datalist>
+                    <br><br>
+                    <span style="font-size: 20px; visibility: hidden;" id="pwmsg"> Password Strength: </span><br>
+                    <meter style="width:445px;height: 15px; border: 1px solid black; margin-left: 5px;visibility: hidden;; " id="strength"></meter>
+                    <input type="submit" class="lg" style="margin-top: 10px;">
+                </form>
+
+            </div>
+            <div class=backdetails>
+                <div class="pitchline" id="pitch">
+                    <h1 id="Main">Looking for a bunkmate?</h1>
+                    <div id="about">Finding a roommate has never been easier.</div>
+                </div>
+                <div class="overlaying">
+                    <div class="bckimage" id="bck"></div>
+                    <div class="qoute">
+                        <h3 class="since-title">HelpingPeopleConnect
+                            <span></span>
+                            <br> Since 2020</h3>
+                        <p>Security & Trust</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews">
+                <div class="reviewtitle">
+                        <h3 class="titlemessage">Straight from the horses mouth!
+                            <span></span>
+                        <p>RoomateFinder has been rated 4.8 out of 5 stars with 430000+ reviews</p>
+                </div>
+                <div class="customer">
+                    <div class="photoandstar">
+                        <div class="custname">Vrushali</div>
+                        <div class="custphoto1"></div>
+                        <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class=review>
+                        When nothing else worked, RoomateFinder came to the rescue.
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="photoandstar">
+                        <div class="custname">Nistha</div>
+                        <div class="custphoto2"></div>
+                        <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class=review>
+                        Easy and hassle free.
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="photoandstar">
+                        <div class="custname">Aditya</div>
+                        <div class="custphoto3"></div>
+                        <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class=review>
+                        RoomateFinder has reduced the 'House hunting' time by 70%.
+                    </div>
+                </div>
+        </div>
+    </body>
+    <script src="scripts/script.js"></script>
+</html>

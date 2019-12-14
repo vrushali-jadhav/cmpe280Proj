@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>See listing</title>
+    <link rel="stylesheet" href="css/add_listing.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="scripts/add_listing.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "30%";
+      }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+     }
+   </script>
+
+   <header>
+       <div class="navigationclass">
+
+               <ul class="navbar-nav" id="navg">
+
+                 <li class="nav-item">
+                   <a class="nav-link sidebar" style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776;&nbsp;</a>
+
+                 </li>
+                   <li class="nav-item">
+                       <a class="nav-link active" id="hom" href="homepage.ejs">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link welcome">Welcome</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link color-b"> User</a>
+                   </li>
+               </ul>
+       </div>
+</header>
+<meta name="description" content="View places available for rent.">
+    <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+    <meta name="author" content="Vrushali Jadhav">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="closeNav()">
+        <div class="information" style="float:left; width:55%;">
+            <div id="mySidenav" class="sidenav" style="width:200px;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="user_profile.html">My Profile</a>
+            <a href="/getUserListing">My Listings</a>
+            <a href="http://localhost:3001/chat">View Messages</a>
+            <a href="/logout">logout</a>
+
+            </div>
+
+            <div class="l1" >
+                <div class="content">
+            <h2>STEP 1</h2>
+            <div class="user_listings">
+
+                <p class="sen">What type of place do you have ?</p>
+                <select class="place" id="place" required>
+                <option value="entire_place">Entire Place</option>
+                <option value="p_room">Private Room</option>
+                <option value="s_room">Shared Room</option>
+                </select>
+                <select class="gender_pref" id="gender_pref" required>
+                <option value="F">for Female</option>
+                <option value="M">for Male</option>
+                <option value="Co-ed">for Both</option>
+                </select><br>
+            </div>
+            <div class="b1" id="b1">
+            <!-- <button id="b1" class="left" onclick="plusDivs(-1)" value="Previous">Back</button> -->
+            <button id="b1" class="right" onclick="placeGen()" value="Next">Next</button>
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="postphoto" id="photoback" style="float:right; width:35%; height: 100%;"></div>
+  </body>
+</html>

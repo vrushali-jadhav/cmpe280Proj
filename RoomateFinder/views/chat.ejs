@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+        <title>IO Chat</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link href="public/css/chat.css" rel="stylesheet" type="text/css" media="all">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="scripts/chat.js"></script>
+        <meta name="description" content="Talk to people">
+        <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+        <meta name="author" content="Vrushali Jadhav">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <br><br><br><br>
+        <div class="container">
+            <div id="userFormArea" class="row" style="display: none;">
+                        <div class="col-md-12">
+                            <form id="userForm">
+                                <div class = "form-group">
+                                    <lable>Enter Username</lable>
+                                    <input class="form-control" id="username"/>
+                                    <br/>
+                                    <input type="submit" class="btn btn-primary" value="login">
+                                </div>                       
+                            </form>
+                        </div>
+            </div>
+            <div id= "messageArea" class="row">
+                <div class="col-md-4">
+                    <div class="well">
+                        <h3>Talk!</h3>
+                        <li class="list-group-item">Vrushali</li>
+                        <li class="list-group-item">Halak</li>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="chat" id="chat"></div>
+                    <form id="messageForm">
+                        <div class = "form-group">
+                            <lable>Enter Message</lable>
+                            <textarea class="form-control" id="message"></textarea>
+                            <br/>
+                            <input type="submit" class="btn btn-primary" value="Send Message">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>🚫

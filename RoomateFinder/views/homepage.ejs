@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Finding a roomate made easy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/multirange.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="scripts/multirange.js"></script>
+    <script type="text/javascript" src="scripts/homepage.js"></script>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+      }
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+     }
+   </script>
+    <meta name="description" content="Find a roomate. Rent your place or find a place on rent.">
+    <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+    <meta name="author" content="Vrushali Jadhav">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="closeNav()">
+
+    <header>
+
+        <div class="navigationclass">
+
+                <ul class="navbar-nav" id="navg">
+
+                  <li class="nav-item">
+                    <a class="nav-link sidebar" style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776;&nbsp;</a>
+
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active home" id="hom" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link welcome">Welcome&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-b"> <%=user%> </a>
+                    </li>
+                </ul>
+        </div>
+</header>
+<div id="mySidenav" class="sidenav" style="display: none; width:20%;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="user_profile.html">My Profile</a>
+   <a href="getUserListing">My Listings</a>
+   <a href="http://localhost:3001/chat">View Messages</a>
+  <a href="/logout">logout</a>
+
+</div>
+<div class="roomate_type">
+      <div class="select_roomate">Looking for&nbsp;&nbsp;</div>
+      <div class="switch-field2">
+        <input type="radio" id="rm" name="switch" value="rm">
+        <label for="rm" style="font-size: 20px;">a room</label>&nbsp;
+        <!-- <input type="radio" id="place" name="switch" value="place">
+        <label for="place" style="font-size: 20px;">a house</label> -->
+        <input type="radio" id="roommate" name="switch" value="roommate">
+        <label for="roommate" style="font-size: 20px;">a roommate</label>
+        <!-- <input type="radio" id="tenant" name="switch" value="tenant">
+        <label for="tenant" style="font-size: 20px;">a tenant</label> -->
+      </div>
+      <div class="search_box">
+        <i class="fas fa-map-marker-alt"></i>
+       <input type="text">
+       <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+</div>
+
+<form method="post" action="/sort">
+  <div class="sortbar">
+    <div class="sortby"><b>Sort By</b><span>&#8595;</span></div>
+    <div class="budget">
+      <div><b>Budget</b></div>
+      <div class="budget_range">$0-10000</div>
+    </div>
+    <div class="budget_slider">
+      <input type="range" multiple value="0,1000" value="500" name="budget">
+    </div>
+    <div class="area">
+      <div><b>Radius</b></div>
+      <div class="radius_range" style=>0-100 mi</div>
+    </div>
+    <div class="area_slider">
+      <input type="range" class="radius_range" multiple value="0,100" value="60">
+    </div>
+
+    <div class="sex">
+      <div class="householdsex"><b>Gender Preference</b></div>
+    <div class="switch-field2">
+      <input type="radio" id="F" name="gender" value="Female">
+      <label for="F">Female</label><br><br>
+      <input type="radio" id="M" name="gender" value="Male" style="width: 20px;">
+      <label for="M">&nbsp;&nbsp;Male&nbsp;&nbsp;</label><br><br>
+      <input type="radio" id="co-ed" name="gender" value="Co-ed">
+      <label for="co-ed">&nbsp;&nbsp;Co-ed&nbsp;&nbsp;</label><br><br>
+    </div>
+    </div>
+
+    <div class="private_shared"><b>Preferred Accomodation</b></div>
+      <div class="switch-field2">
+        <input type="radio" id="private" name="accomodation" value="Private Room">
+        <label for="private">Private</label><br><br>
+        <input type="radio" id="shared" name="accomodation" value="Shared Room">
+        <label for="shared">Shared</label><br><br>
+      </div>
+
+    <div class="pets"><b>Pets ?</b></div>
+      <div class="switch-field2">
+          <input type="radio" id="radio-one" name="pets" value="yes">
+          <label for="radio-one">Yes</label>
+          <input type="radio" id="radio-two" name="pets" value="no" />
+          <label for="radio-two">No</label><br><br>
+      </div>
+      <div class="sort_button"><input type="submit" name="submit" class="sort"></div>    <!--new-->
+      <div class="emp"></div>
+  </div>
+</form>
+<div class="main_block">
+      
+      <% for (var i=(page-1)*6; i<Math.min(posts.length,page*6); i++) { 
+        var n = posts[i].address.indexOf(",");
+        var add = posts[i].address.substring(0,n);
+      %>
+      <div class="listings" id="listings" onclick="window.location = '/getUserListings'">
+        <img class= "houseforrent" src =" <%=posts[i].images%> " title="house for rent">
+        <div class="specs">
+          <div class="favorite">
+            <span class="fa fa-star"></span>
+          </div> 
+          <div class="time_map_pin">an hour ago</div>
+        </div>
+        <div class="descriptions">
+          <img src="images\customer\cust1.jpg" class="profile_pic" title="customer image">
+          <span class="rent">$<%=posts[i].rent%> per month</span><span> | </span>
+          <span class="room_type"><%=posts[i].room_type%></span><br>
+          <span class="info">Looking for a <%=posts[i].gender_preference%> roommate!</span><br>
+          <span class="loaction">
+              <%=
+                add
+              %>
+          </span>
+        </div>
+      </div>
+    <% } %>
+      
+
+</div><br>
+<footer>
+<div class="pagination">
+    <a href="#">&laquo;</a>
+  <% for (var i=1; i<=(posts.length+5)/6; i++) { %>
+    <% if (i + page == 2 ) { %>  
+      <a class="active" href="/home"><%= i %></a>
+    <% }  else if (i == page ) { %>  
+      <a class="active" href="<%= i %>"><%= i %></a>
+    <% } else if (i == 1 ) { %>  
+      <a  href="/home"><%= i %></a>
+    <% }else { %>  
+      <a  href="<%= i %>"><%= i %></a>
+    <% } %>
+    
+  <% } %>
+  <a href="#">&raquo;</a>
+</div>
+</footer>
+  </body>
+</html>

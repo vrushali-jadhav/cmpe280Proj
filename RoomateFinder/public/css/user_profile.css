@@ -1,0 +1,162 @@
+.container{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#form{
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+.card{
+  align-items: center;
+}
+
+.file label{
+  cursor: pointer;
+    font-weight: bold;
+    color: blue;
+    font-size: 20px;
+}
+
+.navbar-nav1
+{
+  height: 100px;
+  background-color: white;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.nav-item1{
+  list-style: none;
+  display:inline;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.ul
+{
+  white-space:nowrap;
+  width: 100%;
+}
+
+.nav-link1
+{
+  font-size: 34px;
+  float:right;
+  margin-right:20px;
+  color: black;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+#navg1
+{
+  -webkit-box-shadow: 0 10px 3px -8px lightgray;
+  -moz-box-shadow: 0 10px 3px -8px lightgray;
+}
+
+.brand, .color-b, .welcome
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  float: left;
+  margin-right:0px;
+  font-weight: bold;
+}
+
+.brand
+{
+  color: black;
+  margin-right:0px;
+  margin-left:90px;
+  padding-left:30px
+}
+
+.welcome
+{
+  margin-left:10px;
+}
+
+.color-b
+{
+  color: #2eca6a;
+
+}
+
+.pitchline{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: black;
+  /* border-left: solid 2px; */
+  background-color: white;
+  margin: 0%;
+  margin-top:50px;
+  padding: 0%;
+  margin-left:165px;
+  padding-bottom: 20px;
+}
+
+#Main
+{
+  font-size: 40px;
+  font-weight: bold;
+  padding-top:20px;
+  color: black;
+  /* border-left: solid 2px; */
+  padding-left:20px;
+}
+
+#about
+{
+  font-size: 20px;
+  padding-top:10px;
+  padding-left:20px;
+  color: black;
+  /* border-left: solid 2px; */
+}
+
+
+.sidenav1  {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #2eca6af5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav1 a {
+  padding: 18px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #111;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav1 a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav1 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav1 {padding-top: 15px;}
+  .sidenav1 a {font-size: 18px;}
+}
+
+.outer{
+  padding-top: 5%;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Find a roomate. List your place.</title>
+    <link rel="stylesheet" href="css/add_listing.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="scripts/add_listing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+        function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.display = "none";
+        }
+   </script>
+   <script type="text/javascript">
+   var loadFile = function(event) {
+   var image = document.getElementById('output');
+   image.src = URL.createObjectURL(event.target.files[0]);
+ };
+   </script>
+   <meta name="description" content="List your place for renting out">
+   <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+   <meta name="author" content="Vrushali Jadhav">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="closeNav()">
+    <header>
+        <div class="navigationclass">
+
+                <ul class="navbar-nav" id="navg">
+
+                  <li class="nav-item">
+                    <a class="nav-link sidebar" style="font-size:28px;cursor:pointer" onclick="openNav()">☰&nbsp;</a>
+
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active home" id="hom" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link welcome">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-b"> User</a>
+                    </li>
+                </ul>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav" style="width: 0px;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="user_profile.html">My Profile</a>
+      <a href="/getUserListing">My Listings</a>
+      <a href="http://localhost:3001/chat">View Messages</a>
+      <a href="/logout">logout</a>
+
+    </div>
+
+    <div class="w3-light-grey">
+      <div class="w3-green" style="height:15px;width:83.33%; border-radius: 5px;"></div>
+    </div>
+    <br>
+
+    <div class="l1" >
+      <div class="image">
+        <img id ="actualimage" src="images/Posts/postsBackground.jpg" alt="Image not found" title="list place for rent">
+      </div>
+
+        <div class="post_content">
+            <div class="content">
+              <h2>STEP 5</h2>
+              <div class="user_listings">
+                    <p style="margin-bottom: 7px;">Upload Picture of your place</p>
+                    <form id="uploadForm"
+                          enctype="multipart/form-data"
+                          action="/api/photo"
+                          method="post">
+                          <input class = "uploadfile" type="file" name="userPhoto" multiple />
+                          <input class = "uploadfile" type="submit" value="Upload Image" name="submit">
+                          <span id = "status"></span>
+                    </form>
+              </div>
+              <button class="left" onclick="location.href = 'getuserlisting4';" value="Previous">Back</button>
+              <button class="right" onclick="location.href = 'getuserlisting6';" value="Next">Next</button>
+      </div>
+  </div>
+</body>
+</html>

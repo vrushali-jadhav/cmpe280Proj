@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>View Listing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/view_listing.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="scripts/view_listing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- <script src="sweetalert2.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQS5W2-j2Hg6iHBV76HuS8fsk2WI5I5ug&callback=initMap">
+    </script>
+	<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+      }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+     }
+   </script>
+   <meta name="description" content="View your posts.">
+   <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+   <meta name="author" content="Vrushali Jadhav">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="showSlides(0)">
+    <header>
+
+        <div class="navigationclass">
+
+                <ul class="navbar-nav" id="navg">
+
+                  <li class="nav-item">
+                    <a class="nav-link sidebar" style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776;&nbsp;</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active home" id="hom" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link welcome">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-b"> User</a>
+                    </li>
+                </ul>
+        </div>
+</header>
+<div id="mySidenav" class="sidenav" style="display: none; width:20%;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="user_profile.html">My Profile</a>
+  <a href="/logout">logout</a>
+
+   <a href="/getUserListing">My Listings</a>
+   <a href="http://localhost:3001/chat">View Messages</a>
+</div>
+
+      <form id="view_listing">
+        <table class = "viewlistingtable">
+          <tr>
+                <td id="im">
+                    <p class ="tourapp">Tour This Apartment</p>
+                    <div class="container">
+                            <div class="mySlides" >
+                                <div class="numbertext">1 / 6</div>
+                                <img src="images\houses\house1.jpg" style="width:100%; height: 100%;">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">2 / 6</div>
+                              <img src="images\houses\house2.jpg" style="width:100%; height: 100%;">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">3 / 6</div>
+                              <img src="images\houses\house3.jpg" style="width:100%; height: 100%;">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">4 / 6</div>
+                              <img src="images\houses\house4.jpg" style="width:100%; height: 100%;">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">5 / 6</div>
+                              <img src="images\houses\house5.jpg" style="width:100%; height: 100%;">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">6 / 6</div>
+                              <img src="images\houses\house6.jpg" style="width:100%; height: 100%;">
+                            </div>
+
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            <div class="caption-container">
+                              <p id="caption"></p>
+                            </div>
+
+                            <div class="row">
+                                  <div class="column">
+                                    <img class="demo cursor" src="images\houses\house1.jpg" style="width:100%; height: 100%;" onclick="currentSlide(1)" alt="The Woods">
+                                  </div>
+                                  <div class="column">
+                                    <img class="demo cursor" src="images\houses\house2.jpg" style="width:100%; height: 100%;" onclick="currentSlide(2)" alt="Cinque Terre">
+                                  </div>
+                                  <div class="column">
+                                    <img class="demo cursor" src="images\houses\house3.jpg" style="width:100%; height: 100%;" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                  </div>
+                                  <div class="column">
+                                    <img class="demo cursor" src="images\houses\house4.jpg" style="width:100%; height: 100%;" onclick="currentSlide(4)" alt="Northern Lights">
+                                  </div>
+                                  <div class="column">
+                                    <img class="demo cursor" src="images\houses\house5.jpg" style="width:100%; height: 100%;" onclick="currentSlide(5)" alt="Nature and sunrise">
+                                  </div>
+                                  <div class="column">
+                                    <img class="demo cursor" src="images\houses\house6.jpg" style="width:100%; height: 100%;" onclick="currentSlide(6)" alt="Snowy Mountains">
+                                  </div>
+                            </div>
+                    </div>
+                </td>
+                <td id="m">
+                    <p class = "viewonmap">View on Map</p>
+                    <div class = "mapclass" id="map"></div>
+                </td>
+          </tr>
+          <tr>
+                <td>
+                  <div class = "detailsandphoto">
+                    <div class="postdetails">
+                        <span id = "rent_l" class="rent_l">$500 </span><span style="font: 26px arial, sans-serif;">|</span>
+                        <span id = "room_type_l" class="room_type_l"> SHARED</span>
+                        <p id = "smoking_l" class="smoking_l">Smoking Frinedly</p>
+                        <p id = "gender_l" class="gender_l">Males Preffered</p>
+                        <p id = "address_l" class="address_l">33S 3rd Street, San Jose, CA</p>
+                        <p class="amenities">Amenities: Parking, Washer/Dryer, WiFi</p>
+                    </div>
+                    <div class="like">
+                        <button class="like_button" onclick="sendLike();">
+                        <i class="fa fa-thumbs-up" style="font-size: 28px;color: #20AA35;"></i>
+                    </div>
+                    <div class="message_icon">
+                      <button class="message_button" onclick="message();">
+                        <a class="fa fa-comments" style="color: #20AA35; font-size: 30px;"></a>
+                        <span class="hidden">Chat</span>
+                    </div>
+                    <div class= "usersphoto" id="img">
+                        <img src="images/customer/cust1.jpg" alt="user image not found" class="user_image">
+                    </div>
+                    <div id="postid"></div>
+                  </div>
+                </td>
+                <td>
+                </td>
+          </tr>
+        </table>
+      </form>
+    </body>
+</html>

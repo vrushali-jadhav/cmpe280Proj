@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Find a roomate. List your place.</title>
+    <link rel="stylesheet" href="css/add_listing.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <script type="text/javascript" src="scripts/add_listing.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+        function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.display = "none";
+        }
+   </script>
+   <meta name="description" content="List your place for renting out">
+   <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+   <meta name="author" content="Vrushali Jadhav">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body onload="closeNav()">
+      <header>
+            <div class="navigationclass">
+                    <ul class="navbar-nav" id="navg">
+                      <li class="nav-item">
+                        <a class="nav-link sidebar" style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776;&nbsp;</a>
+                      </li>
+                        <li class="nav-item">
+                          <a class="nav-link active home" id="hom" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link welcome">Add</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-b">Listing</a>
+                        </li>
+                    </ul>
+            </div>
+      </header>
+      <div id="mySidenav" class="sidenav" style="display: none; width:20%;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="user_profile.html">My Profile</a>
+        <a href="/getUserListing">My Listings</a>
+        <a href="http://localhost:3001/chat">View Messages</a>
+        <a href="/logout">logout</a>
+
+      </div>
+
+      <div class="w3-light-grey">
+        <div class="w3-green" style="height:15px;width:100%; border-radius: 5px;"></div>
+      </div><br>
+
+      <div class="l1" >
+          <div class="image">
+            <img id ="actualimage" src="images/Posts/postsBackground.jpg" alt="Image not found" title="list place for rent">
+          </div>
+
+          <div class="post_content">
+            <div class="content">
+                <h1 id="cong" style="padding-top: 5%;"><b>Congratulations!</b></h1>
+                <p id = "postmsg"><b>Your post has been successfully submitted.</b></p>
+                <img id="congratulations" class="congratulationsImage" title="place listed" src="images/Posts/giphy.gif"/>
+                <br>
+                <button id="postSubmitted" class="right6" onclick="location.href = 'getUserListing';" value="submit">Great!</button>
+            </div>
+          </div>
+      </div>
+  </body>
+</html>

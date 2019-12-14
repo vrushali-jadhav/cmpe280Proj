@@ -1,0 +1,325 @@
+html[dir='rtl'] foo {
+  /* RTL-specific rules for the FOO element */
+}
+
+body.rtl foo {
+  /* RTL-specific rules for the FOO element */
+}
+
+.hover_bkgr_fricc{
+  cursor: pointer;
+  display: none;
+  height: 100%;
+  position: relative;
+    right: 33%;
+  /* position: fixed; */
+  text-align: center;
+  top: 0;
+  /* width: 100%; */
+  z-index: 10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+.trigger_popup_fricc {
+  color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+background: #20AA35;
+/* padding: 20px; */
+border-radius: 50px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+  /* border-radius: 7%; */
+    width: 42%;
+    height: 15%;
+    /* background-color: #a5dc86; */
+    cursor: pointer;
+    font-size: 18px;
+    margin: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.trigger_popup_fricc:hover {
+  /* text-shadow: 0px 0px 6px rgba(255, 255, 255, 1); */
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+.hover_bkgr_fricc2{
+  cursor: pointer;
+  display: none;
+  height: 100%;
+width: 79%;
+position: relative;
+right: 49%;
+  /* position: fixed; */
+  text-align: center;
+  top: 0;
+  /* width: 100%; */
+  z-index: 10000;
+}
+.hover_bkgr_fricc2 .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc2 > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton2 {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton2:hover {
+    background-color: #ccc;
+}
+
+.trigger_popup_fricc2 {
+  color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+background: #20AA35;
+/* padding: 20px; */
+border-radius: 50px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+  /* border-radius: 7%; */
+    width: 33%;
+    height: 15%;
+    /* background-color: #a5dc86; */
+    cursor: pointer;
+    font-size: 18px;
+    margin: 15px;
+    display: inline-block;
+    font-weight: bold;
+    position: relative;
+    left: -25%;
+}
+
+.trigger_popup_fricc2:hover {
+  /* text-shadow: 0px 0px 6px rgba(255, 255, 255, 1); */
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+table{
+  border-radius: 8px;
+    padding-left: 16%;
+    padding-top: 2%;
+    weight: 1000px;
+}
+tr{
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td{
+  height: 270px;
+    width: 412px;
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+}
+
+th{
+  float: left;
+    font-size: 20px;
+    padding-bottom: 1%;
+}
+
+span{
+  padding-left: 6.5%;
+}
+
+.add_list_title{
+  float: right;
+  font-size: 25px;
+  color: #2eca6a;
+  position: relative;
+  top: -36px;
+  right: 7%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.view_listings{
+  font-size: 35px;
+    padding-left: 0%;
+    padding-top: 3%;
+    font-weight: bold;
+}
+
+/* .user_l1
+{
+  width: 50%;
+  height: 80%;
+  margin-top: 20px;
+} */
+
+.your_listings {
+    border-radius: 10px;
+    padding: 1%;
+    position: relative;
+    margin: 1%;
+    padding-bottom: 5%;
+    margin-right: 3%;
+    float: left;
+    display: inline;
+    width: 43%;
+}
+
+.descriptions_l1{
+  position: relative;
+      left: 569px;
+      top: -307px;
+      font-size: 20px;
+}
+
+.next
+{
+  float:left;
+}
+
+.sidebar
+{
+  padding-top: 10px; 
+  margin-right: 100px;
+}
+
+.welcome 
+{
+  margin-left:50px;
+}
+
+.home
+{
+  margin-right:25px;
+  padding-top: 15px;
+}
+
+.container
+{
+  height: 450px;
+  width: 1250px;
+  margin-left: 100px;
+  margin-right:40px;
+  border-left: 3px solid lightgray;
+  border-radius: 5px;
+  z-index: 0;
+  position: relative;
+}
+
+.tourapp, .viewonmap
+{
+  font-size: 24px;
+  position: relative;
+  font-weight: bold;
+  width: 400px;
+  margin-left:100px;
+  margin-top: 50px;
+}
+
+.photo
+{
+  height: 400px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top:20px;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+}
+
+.postdetails
+{
+  font:  24px arial, sans-serif; 
+  padding-left: 10px; 
+  padding-top:0px;
+  width: 695px;
+  position: absolute;
+  z-index: 1;
+  margin-left: 680px;
+  margin-top: 80px;
+}
+
+.like
+{
+  position: absolute;
+  z-index: 2;
+  margin-left: 1190px; 
+  padding-top:20px;
+  width: 450px;
+  height: 300px;
+}
+
+.border
+{
+  border-right: 3px solid #2eca6a;
+  border-bottom: 3px solid #2eca6a;
+  border-left: 3px solid rgb(179, 143, 143);
+  border-top: 3px solid lightgray;
+  border-radius: 5px;
+}

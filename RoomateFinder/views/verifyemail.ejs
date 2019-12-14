@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="Vreify users email.">
+    <meta name="keywords" content="Bunkmmate,Roomatefinder,renting,roommate">
+    <meta name="author" content="Vrushali Jadhav">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function togglefunc(){
+            var temp = document.getElementById("otp"); 
+            if (temp.type === "password") { 
+                temp.type = "text"; 
+            } 
+            else { 
+                temp.type = "password"; 
+            } 
+        }
+        function showfunc(){
+            window.alert("OTP Sent To Email!!");
+        }
+    </script>
+    <body>
+        <header>
+            <div class="navigationclass">
+                    <ul class="navbar-nav" id="navg">
+                        <li class="nav-item">
+                            <a class="nav-link register" id="reg" href="register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="log" href="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="hom" href="">Hi there!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link brand">Roommate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-b">Finder</a>
+                        </li>
+                    </ul>
+                </div>
+    </header>
+        <div class="login">
+            <div class="logindetails">Email Verification
+                <form method="post" action="/otppost">
+                    <input type="password" class= "loginclass" id="otp" name="otp" placeholder="Enter the One-time Password" required>
+                    <br>
+                    <input type="checkbox" id="otpcheckbox" onclick="togglefunc()"> <span style="font-size: 15px;;">Check to show password</span>
+                    <br>
+                    <input type="submit" class="lg" >
+                </form>
+                    
+            </div>
+            <div class=backdetails>
+                <div class="pitchline" id="pitch">
+                    <div id="Main">Looking for a bunkmate?</div>
+                    <div id="about">Finding a roommate has never been easier.</div>
+                </div>
+                <div class="overlaying">
+                    <div class="bckimage" id="bck"></div>
+                    <div class="qoute">
+                        <h3 class="since-title">HelpingPeopleConnect
+                            <span></span>
+                            <br> Since 2020</h3>
+                        <p>Security & Trust</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews">
+                <div class="reviewtitle">
+                        <h3 class="titlemessage">Straight from the horses mouth!
+                            <span></span>
+                        <p>RoomateFinder has been rated 4.8 out of 5 stars with 430000+ reviews</p>
+                </div>
+                <div class="customer">
+                    <div class="photoandstar">
+                        <div class="custname">Vrushali</div>
+                        <div class="custphoto1"></div>
+                        <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class=review>
+                        When nothing else worked, RoomateFinder came to the rescue.
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="photoandstar">
+                        <div class="custname">Nistha</div>
+                        <div class="custphoto2"></div>
+                        <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class=review>
+                        Easy and hassle free.
+                    </div>
+                </div>
+                <div class="customer">
+                    <div class="photoandstar">
+                        <div class="custname">Aditya</div>
+                        <div class="custphoto3"></div>
+                        <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                    <div class=review>
+                        RoomateFinder has reduced the 'House hunting' time by 70%.
+                    </div>
+                </div>
+        </div>
+    </body>
+    <script src="scripts/script.js"></script>
+</html>
