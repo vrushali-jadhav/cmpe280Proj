@@ -402,7 +402,7 @@ app.get('/gmaillogin', (req, res) => {
 	if (!authed) {
 		// Generate an OAuth URL and redirect there
 		const url = oAuth2Client.generateAuthUrl({
-			access_type: 'offline',
+			access_type: 'online',
 			scope: 'https://www.googleapis.com/auth/gmail.readonly'
 		});
 		//console.log(url)
@@ -543,7 +543,7 @@ app.post('/sendLikeNotification', function(req, res) {
 	var valuesToStore = req.body;
 			var arrayOfNames = [];
 			var i;
-			let savepostquery = `SELECT userid FROM roommatedatabase.PostsLikedBy where postid="${valuesToStore["postId"]}"`;
+			let savepostquery = `SELECT userid FROM PostsLikedBy where postid="${valuesToStore["postId"]}"`;
 			
 			db.query(savepostquery, (err, result) => {
 				if (err) {
