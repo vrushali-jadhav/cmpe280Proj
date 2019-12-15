@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const app1 = express();
-const port = 3000;
+//const port = 3000;
 const nodemailer = require('nodemailer');
 const multer = require('multer');
 const notifier = require('node-notifier');
@@ -145,7 +145,7 @@ app.post('/api/photo', function(req, res) {
 	});
 });
 
-app.set('port', process.env.port || port); // set express to use this port
+//app.set('port', process.env.port || port); // set express to use this port
 app.set('views', __dirname + '/views'); // set express to look in this folder to render our view
 app.set('view engine', 'ejs'); // configure template engine
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -621,6 +621,7 @@ app.post('/sort', function(req, res) {
 	});
 }); 
 
+var port = process.env.PORT || 3000;
 app.listen(port, () => {
 	console.log(`Server started on post ${port}..`);
 });
