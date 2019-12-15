@@ -2,17 +2,17 @@ var i = 0;
 
 window.addEventListener("load", function(){
     var path = window.location.href;
-    if(path.includes("http://localhost:3000/register") || path.includes("information.html"))
+    if(path.includes("http://35.167.216.61:3000/register") || path.includes("information.html"))
     {
         let tab1 = document.getElementById("reg");
         tab1.style.color = "#2eca6a";
     }
-    else if(path.includes("http://localhost:3000/login"))
+    else if(path.includes("http://35.167.216.61:3000/login"))
     {
         let tab3 = document.getElementById("log");
         tab3.style.color = "#2eca6a";
     }
-    else if(path.includes("http://localhost:3000/"))
+    else if(path.includes("http://35.167.216.61:3000/"))
     {
         let tab2 = document.getElementById("hom");
         tab2.style.color = "#2eca6a";

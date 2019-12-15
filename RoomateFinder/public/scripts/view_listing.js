@@ -106,6 +106,6 @@ function sendNotification()
 
 function message()
 {
-  document.location.href="http://localhost:3001/chat";
+  document.location.href="http://35.167.216.61:3001/chat";
   event.preventDefault();
 }
